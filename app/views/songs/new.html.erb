@@ -4,8 +4,21 @@
   <%= f.label :title %>
   <%= f.text_field :title %>
   <br />
+  <% end %>
+
+<%= form_for @artist do |a| %>
+  <%= a.label :artist_name %>
+  <%= a.text_field :artist_name %>
+  <br />
+  <% end %>
+
+  <!-- <%= f.label :genre_id %>
+  <%= f.text_field :genre_id %>
+  <br />
+
+  <%= f.label :note_content %>
+  <%= f.text_field :note_content %>
+  <br />
 
   <%= f.submit %>
-<% end %>
-
-
+<% end %> -->
