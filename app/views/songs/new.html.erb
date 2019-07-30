@@ -5,7 +5,25 @@
   <%= f.text_field :title %>
   <br />
 
+  <!-- Song has an artist id, but we can't ask the user to input the id, so we create an artist_name setter for that-->
+  <%= f.label :artist_name %>
+  <%= f.text_field :artist_name %>
+  <br />
+
+
+  <!-- We use collection_select to be able to select one genre from many -->
+  <!-- We use genre_id to get al the genres, and we will use it to permit genre too -->
+  <%= f.collection_select :genre_id, Genre.all, :id, :name %> <br/>
+
+
+  <!-- to associate several no to a song we use that structure -->
+  <!-- to permit note_contents: [] -->
+  <input name='song[note_contents][]' id='song_notes_1'>
+  <input name='song[note_contents][]' id='song_notes_2'>
+  <input name='song[note_contents][]' id='song_notes_3'>
+
   <%= f.submit %>
 <% end %>
+
 
 
