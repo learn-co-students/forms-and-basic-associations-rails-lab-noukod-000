@@ -1,4 +1,7 @@
 <h1>All songs</h1>
+<!-- 
+<%= @songs.each{|song|song.artist.name} %>
+-->
 
 <% @songs.each do |song| %>
   <span class=song-title><%= song.title %></span>
@@ -9,5 +12,4 @@
       <li class=song-note><%= note.content %></li>
     <% end %>
   </ul>
-
 <% end %>
